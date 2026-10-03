@@ -12,14 +12,14 @@ Computer Science at CUHK (graduating July 2027). I build quant research infrastr
 
 | Project | Problem | Method | One number |
 |---|---|---|---|
-| [cuhk-qts-research-platform](https://github.com/hihihhi/cuhk-qts-research-platform) | Give a student quant team tick-level data and shared GPUs that behave like professional infrastructure | Raw → typed Parquet → cleansed layers, versioned query library and API, tiered certificate sign-in, gates | 650B+ cleansed market-data rows |
-| [asof-research](https://github.com/hihihhi/asof-research) | Let LLM agents propose and critique research without letting them decide what counts | Point-in-time data contracts, frozen method cards, deterministic tests, a non-promoting LLM critic, a human gate; C++20 replay hot path | C++ replay 60× faster than the Python batch path, byte-identical output (synthetic benchmark) |
-| [alpha-gp-lab](https://github.com/hihihhi/alpha-gp-lab) | Search factor expressions without fooling yourself | Genetic programming over a typed grammar, LLM-proposed seeds, strict train/validation/test roles, walk-forward | See its README: real-data results reported with baselines |
+| [cuhk-qts-research-platform](https://github.com/hihihhi/cuhk-qts-research-platform) | Give a student quant team tick-level data and shared GPUs that behave like professional infrastructure | Raw → typed Parquet → cleansed layers, versioned query library and API, tiered certificate sign-in, admission control, gates | 650B+ stored market-data rows; 0 lost commits under concurrent writers |
+| [asof-research](https://github.com/hihihhi/asof-research) | Let LLM agents propose and critique research without letting them decide what counts | Point-in-time data contracts, frozen method cards, pre-registered protocols, a non-promoting LLM critic, a human gate; C++20 replay hot path | Pre-registered real-data study, independently recomputed; C++ replay 5.5× faster from Python (61× core) |
+| [alpha-gp-lab](https://github.com/hihihhi/alpha-gp-lab) | Search factor expressions without fooling yourself | Genetic programming over a typed grammar, LLM-proposed seeds, train/validation/test roles, equal-budget random and naive controls, beta/size neutralisation | Every result shown against random, frozen-ranking and market-neutral controls |
 | [imc-prosperity-4-shdc](https://github.com/hihihhi/imc-prosperity-4-shdc) | What we did in each round, what top teams did differently, and what I learned | Round-by-round write-up against 11 top-team write-ups | 904 / 18,803 |
 | [ptcg-ai-battle](https://github.com/hihihhi/ptcg-ai-battle) | Play a card game under imperfect information within a time budget | Imitation learning (set transformer), self-play PPO, search baselines | 2,043 / 6,807 |
-| [agent-harness](https://github.com/hihihhi/agent-harness) | Make seven AI coding tools share rules, memory and safety checks | One standard-library install, A/B-evaluated | Cross-session recall 0/3 → 3/3 |
+| [agent-harness](https://github.com/hihihhi/agent-harness) | Make seven AI coding tools share rules, memory and safety checks | One standard-library install, A/B-evaluated, command guard tested on held-out cases | Guard blocks 40 of 45 unseen dangerous commands, 20/20 safe pass |
 
-Also: [Polymarket-Crypto-5min](https://github.com/hihihhi/Polymarket-Crypto-5min), a chronological walk-forward on public Bitcoin data with a negative out-of-sample result (16 trades, ROI on stake −7.69%).
+Also: [Polymarket-Crypto-5min](https://github.com/hihihhi/Polymarket-Crypto-5min), a leakage-controlled chronological walk-forward on public Polymarket and Binance data.
 
 ## How I work
 
