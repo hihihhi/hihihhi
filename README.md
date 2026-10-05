@@ -1,3 +1,5 @@
+<img src="assets/header.jpg" width="100%" alt="Victoria Harbour drawn from data: each building is one month of BTC/USDT prices, lit windows are up days, the glowing roofline is the price chart, the beams are the data platform's concurrent readers and writers, and the water holds a live order book">
+
 # Oscar Choi
 
 <img align="right" width="230" src="assets/fourier_portrait.gif" alt="A line portrait of Oscar being drawn by 500 rotating circles (a Fourier series)">
