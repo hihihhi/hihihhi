@@ -1,6 +1,6 @@
 <img src="assets/header.svg" width="100%" alt="Victoria Harbour drawn from data: each building is one month of BTC/USDT prices, lit windows are up days, the glowing roofline is the price chart, the beams are the data platform's concurrent readers and writers, and the water holds a live order book">
 
-<p align="center"><sub><code>roofline</code> BTC/USDT monthly close &nbsp;·&nbsp; <code>windows</code> up days &nbsp;·&nbsp; <code>beams</code> the <a href="https://github.com/oscar-chw/qts-platform-showcase">QTS data platform</a>: 12 readers, 5 writers, 0 lost &nbsp;·&nbsp; <code>t = now</code> nothing to its right is used (<a href="https://github.com/oscar-chw/asof-research">asof-research</a>) &nbsp;·&nbsp; <code>water</code> a live order book (<a href="https://github.com/oscar-chw/asof-research/tree/main/packages/imc-sim">Market-Making Lab</a>)</sub></p>
+<p align="center"><sub><code>roofline</code> BTC/USDT monthly close &nbsp;·&nbsp; <code>windows</code> green up days, red down days &nbsp;·&nbsp; <code>beams</code> the <a href="https://github.com/oscar-chw/qts-platform-showcase">QTS data platform</a>: 12 readers, 5 writers, 0 lost &nbsp;·&nbsp; <code>t = now</code> nothing to its right is used (<a href="https://github.com/oscar-chw/asof-research">asof-research</a>) &nbsp;·&nbsp; <code>water</code> a live order book, green bids and red asks (<a href="https://github.com/oscar-chw/asof-research/tree/main/packages/imc-sim">Market-Making Lab</a>)</sub></p>
 
 # Oscar Choi
 
@@ -12,7 +12,7 @@ Computer Science at CUHK (graduating July 2027). I build quant research infrastr
 <details>
 <summary><b>How this page is drawn</b></summary>
 
-- **The harbour** is built from data: one building per month of BTC/USDT (Binance daily closes, 2020 to now). The roof is the monthly close on a log scale, the red light is the monthly high, and each lit window is one up day. Packets on the beams replay the data platform's race test: 12 readers and 5 writers (4 appending, 1 rewriting a partition), with no commit lost. The water holds a Binance order-book snapshot (5 Oct 2026). It all moves in plain SVG and CSS, since GitHub runs no scripts.
+- **The harbour** is built from data: one building per month of BTC/USDT (Binance daily closes, 2020 to now). The roof is the monthly close on a log scale, the white light is the monthly high, and each window is one trading day: green up, red down. Past "now" the towers are unlit blueprints, because nothing from the future is used. Packets on the beams replay the data platform's race test: 12 readers and 5 writers (4 appending, 1 rewriting a partition), with no commit lost. The water holds a Binance order-book snapshot (5 Oct 2026): green bids, red asks. It all moves in plain SVG and CSS, since GitHub runs no scripts.
 - **The portrait** is one continuous line through the edges of my photo, rewritten as a Fourier series, z(t) = Σ c<sub>k</sub> e<sup>2πikt</sup>: 500 circles, each turning at its own frequency, and the pen at the end of the chain redraws the face.
 
 </details>
