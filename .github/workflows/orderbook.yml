@@ -1,0 +1,34 @@
+name: Refresh header order book
+# Redraws only the order-book bars on the water in assets/header.svg from Binance's
+# public depth API. Commits as github-actions[bot], so nothing lands on Oscar's
+# contribution graph. data-api.binance.vision because api.binance.com returns 451
+# to US-hosted runners.
+on:
+  schedule:
+    - cron: "17 1 * * *"   # daily, 01:17 UTC
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: orderbook
+  cancel-in-progress: true
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Tests
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Refresh the order book
+        run: python3 scripts/update_orderbook.py assets/header.svg
+      - name: Commit if the bars changed
+        run: |
+          git diff --quiet -- assets/header.svg && { echo "no change"; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/header.svg
+          git commit -m "Refresh header order book (Binance BTCUSDT, $(date -u +'%Y-%m-%d %H:%M') UTC)"
+          git push
