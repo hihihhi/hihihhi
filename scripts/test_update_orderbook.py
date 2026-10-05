@@ -47,6 +47,12 @@ class Rewrite(unittest.TestCase):
         self.assertEqual(SVG[old[-1].end():], out[new[-1].end():])            # everything after: byte-identical
         self.assertNotEqual(SVG, out)                                          # and the bars did change
 
+    def test_nothing_but_whitespace_sits_between_the_rects(self):
+        # rewrite() replaces the span from the first rect to the last; anything else inside it would be lost
+        old = list(RECT.finditer(SVG))
+        between = RECT.sub('', SVG[old[0].start():old[-1].end()])
+        self.assertEqual(between.strip(), '')
+
     def test_rows_keep_their_positions(self):
         out = rewrite(SVG, parse_book(book()))
         ys = lambda s: re.findall(r'<rect x="[^"]*" y="([^"]*)" width="[^"]*" height="2" fill="url\(#(?:bid|ask)\)">', s)
