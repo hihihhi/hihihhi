@@ -10,16 +10,37 @@ Computer Science at CUHK (graduating July 2027). I build quant research infrastr
 
 ## Projects
 
-| Project | Problem | Method | One number |
-|---|---|---|---|
-| [CUHK QTS research platform](https://github.com/hihihhi/qts-platform-showcase) (write-up; code private) | Give a student quant team tick-level market data it can trust | Raw → typed Parquet → cleaned layers, versioned query library and API, data-quality checks | 700B+ stored market-data rows; 0 of 23 commits lost in a concurrency test |
-| [asof-research](https://github.com/hihihhi/asof-research) | Can an LLM pick better trading hypotheses than brute force, under one honest gate? | Point-in-time data contracts, frozen method cards, pre-registered protocols, a non-promoting LLM critic, a human gate; separate opt-in C++20 replay port (not used by the study) | Real-data run: 120 hypotheses screened; both controls' picks lost money out of sample, 0 of 2 promoted; LLM arm pending to 2027-08. 962 numbers recomputed by a separate script. C++ replay ~2.3× from Python (25× over Python batch when called from C++, synthetic) |
-| [alpha-gp-lab](https://github.com/hihihhi/alpha-gp-lab) | Search factor expressions without fooling yourself | Genetic programming over a restricted, parsed grammar; train/validation/test roles; equal-budget random search and a one-line control; post-hoc beta/size neutralisation | Test rank IC 0.082 but net not significant (t 0.22); random search 0.080, one-line control 0.082; 60% survives post-hoc beta/size neutralisation |
-| [imc-prosperity-4-shdc](https://github.com/hihihhi/imc-prosperity-4-shdc) | What we did in each round, what other teams did differently, and what I learned | Round-by-round write-up against 9 public Prosperity 4 write-ups (placements 2nd to 583rd, as stated) | 904 / 18,803 (IMC's team count) |
-| [ptcg-ai-battle](https://github.com/hihihhi/ptcg-ai-battle) | Play a card game under imperfect information | Imitation learning (set transformer), self-play PPO (not submitted), search baselines | 2,043 / 6,807 (team entry) |
-| [agent-harness](https://github.com/hihihhi/agent-harness) | Give seven AI coding tools shared rules and/or memory, and Claude Code a command guard | One standard-library install; A/B-evaluated on 2 of the 7 tools (private question set); guard tested on a held-out set written by the build session | Guard blocks 39 of 45 held-out dangerous commands, 20/20 safe pass |
+### Market data and infrastructure
 
-Also: [Polymarket-Crypto-5min](https://github.com/hihihhi/Polymarket-Crypto-5min), a leakage-controlled chronological walk-forward on public Polymarket and Binance data.
+| Project | What it is | One number |
+|---|---|---|
+| [CUHK QTS research platform](https://github.com/hihihhi/qts-platform-showcase) (write-up; code private) · [runnable demo](https://github.com/hihihhi/qts-platform-demo) | Tick-level market data a student quant team can trust: raw → typed Parquet → cleaned layers, versioned query library and API, data-quality checks. The demo is an independent stand-in on synthetic data | 700B+ stored market-data rows; 0 of 23 commits lost in a concurrency test |
+| [asof-research](https://github.com/hihihhi/asof-research) | Can an LLM pick better trading hypotheses than brute force, under one honest gate? Point-in-time data contracts, pre-registered protocols, a non-promoting LLM critic, a human gate; separate opt-in C++20 replay port (not used by the study) | Real-data run: 120 hypotheses screened; both controls' picks lost money out of sample, 0 of 2 promoted; LLM arm pending to 2027-08. C++ replay ~2.3× from Python (25× over Python batch when called from C++, synthetic) |
+| [streaming-reconciliation](https://github.com/hihihhi/streaming-reconciliation) | Counts each recorded trade close exactly once across JSONL/CSV copies and retries, streaming through sorted runs on disk (from the WQT 2025 hackathon; team strategy not included) | Peak memory 683.8 MB → 27.5 MB (−96%) and 11.8% faster than an in-memory reader, identical reports (100k synthetic closes) |
+
+### Quant research
+
+| Project | What it is | One number |
+|---|---|---|
+| [alpha-gp-lab](https://github.com/hihihhi/alpha-gp-lab) | Public-data companion to my WorldQuant BRAIN work: genetic programming over WorldQuant-style formulas with pre-registered train/validation/test roles, delay-1 and costs, equal-budget random search as a control | Test rank IC 0.082 but net not significant (t 0.22); random search 0.080, one-line control 0.082 |
+| [Factor Lab](https://github.com/hihihhi/asof-research/tree/main/packages/factor) | Lagged momentum vs reversal by Spearman rank IC, chosen on validation; convex allocation under risk and position limits with a turnover cost | Solver checked against hand-solved cases (synthetic data) |
+| [Market-Making Lab](https://github.com/hihihhi/asof-research/tree/main/packages/imc-sim) | Market-making simulator with partial fills, queue position and cancel delays; fill quality measured with as-of markouts | 18 synthetic scenarios (2 strategies × 3 price paths × 3 fill models) |
+| [Polymarket-Crypto-5min](https://github.com/hihihhi/Polymarket-Crypto-5min) | A leakage-controlled chronological walk-forward on public Polymarket and Binance data | |
+
+### Competitions
+
+| Project | What it is | One number |
+|---|---|---|
+| [imc-prosperity-4-shdc](https://github.com/hihihhi/imc-prosperity-4-shdc) | What we did in each round, what other teams did differently, and what I learned, against 9 public Prosperity 4 write-ups (placements 2nd to 583rd, as stated) | 904 / 18,803 (IMC's team count) |
+| [ptcg-ai-battle](https://github.com/hihihhi/ptcg-ai-battle) | A card game under imperfect information: imitation learning (set transformer), self-play PPO (not submitted), search baselines | 2,043 / 6,807 (team entry) |
+
+### AI engineering
+
+| Project | What it is | One number |
+|---|---|---|
+| [agent-harness](https://github.com/hihihhi/agent-harness) | Shared rules and/or memory for seven AI coding tools, and a command guard for Claude Code; one standard-library install, A/B-evaluated on 2 of the 7 tools (private question set) | Guard blocks 39 of 45 held-out dangerous commands, 20/20 safe pass |
+| [gpt-cc](https://github.com/hihihhi/gpt-cc) | Local gateway translating Claude Code's Anthropic API requests to OpenAI-compatible APIs or Codex CLI; unsupported features fail closed | |
+| [quant-research-vault](https://github.com/hihihhi/quant-research-vault) | Local arXiv/OpenAlex paper ingestion into SQLite and ChromaDB, served to AI assistants through a read-only MCP search server | |
 
 ## How I work
 
