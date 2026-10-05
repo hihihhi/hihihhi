@@ -37,7 +37,7 @@ Computer Science at CUHK (graduating July 2027). I build quant research infrastr
 
 | Project | What it is | One number |
 |---|---|---|
-| [alpha-gp-lab](https://github.com/oscar-chw/alpha-gp-lab) | Public-data companion to my WorldQuant BRAIN work: genetic programming over WorldQuant-style formulas with pre-registered train/validation/test roles, delay-1 and costs, equal-budget random search as a control | 34 coins, 6.7 years, pre-registered splits; test rank IC 0.08, matched by an equal-budget random search |
+| [alpha-gp-lab](https://github.com/oscar-chw/alpha-gp-lab) | Genetic programming over formulaic alpha expressions with pre-registered train/validation/test roles, delay-1 signals and costs, and an equal-budget random search as a control | 34 coins, 6.7 years, pre-registered splits; test rank IC 0.08, matched by an equal-budget random search |
 | [Factor Lab](https://github.com/oscar-chw/asof-research/tree/main/packages/factor) | Lagged momentum vs reversal by Spearman rank IC, chosen on validation; convex allocation under risk and position limits with a turnover cost | Solver checked against hand-solved cases (synthetic data) |
 | [Market-Making Lab](https://github.com/oscar-chw/asof-research/tree/main/packages/imc-sim) | Market-making simulator with partial fills, queue position and cancel delays; fill quality measured with as-of markouts | 18 synthetic scenarios (2 strategies × 3 price paths × 3 fill models) |
 | [Polymarket-Crypto-5min](https://github.com/oscar-chw/Polymarket-Crypto-5min) | Point-in-time walk-forward backtester for Polymarket's Bitcoin 5-minute markets; an availability audit caught candles indexed at open, not close (a look-ahead leak) | 512 entry × 192 exit rules over 26 chronological folds |
