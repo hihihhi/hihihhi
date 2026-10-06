@@ -58,7 +58,6 @@ One system: a vault of cited notes and results, a harness whose gates decide whe
 |---|---|---|
 | [streaming-reconciliation](https://github.com/oscar-chw/streaming-reconciliation) | Counts each recorded trade close exactly once across JSONL/CSV copies and retries, streaming through sorted runs on disk (WQT 2025 hackathon; team strategy not included) | Peak memory −96% in 11.8% less time than an in-memory reader (100k synthetic closes) |
 | [alpha-gp-lab](https://github.com/oscar-chw/alpha-gp-lab) | Genetic programming over formulaic alpha expressions with pre-registered train/validation/test roles, delay-1 signals, costs and an equal-budget random search as a control | 34 coins, 6.7 years; test rank IC 0.08, matched by random search |
-| [gpt-cc](https://github.com/oscar-chw/gpt-cc) | Local gateway translating Claude Code's Anthropic API requests to OpenAI-compatible APIs or Codex CLI; unsupported features fail closed | 29 offline unit tests |
 
 ## How I work
 
