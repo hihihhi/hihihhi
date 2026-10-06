@@ -6,7 +6,7 @@
 
 <img align="right" width="230" src="assets/fourier_portrait.gif" alt="A line portrait of Oscar being drawn by 500 rotating circles (a Fourier series)">
 
-Computer Science at CUHK (graduating July 2027). I build quant research infrastructure and test trading ideas against point-in-time data, with explicit controls and costs. I am the sole developer and architect of the CUHK Quant Trading Society research team's data platform and a WorldQuant BRAIN research consultant.
+Computer Science at CUHK, with minors in Data Analytics and Informatics, and Business (graduating July 2027). I build quant research infrastructure and test trading ideas against point-in-time data, with explicit controls and costs. I am the sole developer and architect of the CUHK Quant Trading Society research team's data platform and a WorldQuant BRAIN research consultant.
 
 
 <details>
@@ -31,7 +31,7 @@ One system: a vault of cited notes and results, a harness whose gates decide whe
 
 | Component | Role in the system | One number |
 |---|---|---|
-| [agentic-quant-research](https://github.com/oscar-chw/agentic-quant-research) | Centrepiece build: a Claude Code orchestrator and its subagents turned a quant-finance textbook into 1,805 paraphrased, cited claims and a tested Python library (whole project: about 140 subagents, 266 gated tasks) | 1,400+ extracted claims verified by passing tests (758 tests, 0 failing) |
+| [agentic-quant-research](https://github.com/oscar-chw/agentic-quant-research) | Centrepiece build: a Claude Code orchestrator and its subagents turned a quant-finance textbook into 1,805 paraphrased, cited claims and a tested Python library (whole project: about 140 subagents, 266 gated tasks) | 1,417 of 1,615 implemented claims verified by passing tests (773 tests, 0 failing) |
 | [asof-research](https://github.com/oscar-chw/asof-research) | Point-in-time research harness: an LLM proposes hypotheses but never scores them; pre-registered gate, human promotion. Includes the [Factor Lab](https://github.com/oscar-chw/asof-research/tree/main/packages/factor), the [Market-Making Lab](https://github.com/oscar-chw/asof-research/tree/main/packages/imc-sim) and a C++20 order-book replay port | 120 hypotheses screened on real Binance data; the gate blocked both control picks. C++20 replay ~2.3× faster end-to-end from Python (synthetic benchmark) |
 | [agent-harness](https://github.com/oscar-chw/agent-harness) | The harness, packaged: shared rules and memory tools for seven AI coding tools, and a command guard for Claude Code | Guard blocks 39 of 45 held-out dangerous commands, 20/20 safe pass |
 | [quant-research-vault](https://github.com/oscar-chw/quant-research-vault) | Paper layer of the vault: arXiv/OpenAlex ingestion into SQLite and ChromaDB, served through a read-only MCP search server | 18,492 paper records at a 2026-07-30 audit (database unpublished) |
