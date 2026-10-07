@@ -19,6 +19,7 @@ Computer Science at CUHK, with minors in Data Analytics and Informatics, and Bus
 
 ## Results
 
+- **Open-source contributor to FatQat**: merged fix sizing process shot workers by the CPU affinity mask ([spaceqat/fatqat#52](https://github.com/spaceqat/fatqat/pull/52)).
 - **IMC Prosperity 4** (team SHDC): 904th of 18,803 teams, 18th in Hong Kong.
 - **Kaggle Pokémon TCG AI Battle**: team entry, 2,043rd of 6,807 teams on the Simulation leaderboard (read 2026-09-13).
 - **MonsoonSIM Enterprise Resource Management Competition 2025**: 3rd place (second runner-up).
