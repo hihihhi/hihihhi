@@ -37,13 +37,13 @@ One system: a vault of cited notes and results, a harness whose gates decide whe
 | [quant-research-vault](https://github.com/oscar-chw/quant-research-vault) | Paper layer of the vault: arXiv/OpenAlex ingestion into SQLite and ChromaDB, served through a read-only MCP search server | 18,492 paper records at a 2026-07-30 audit (database unpublished) |
 | [Polymarket-Crypto-5min](https://github.com/oscar-chw/Polymarket-Crypto-5min) | Earlier, separate experiment (July 2026, not built from the book): point-in-time walk-forward backtester; an availability audit caught a look-ahead leak in candle timing | 512 entry × 192 exit rules over 26 chronological folds |
 
-### 2. CUHK QTS research data platform
-
-[Write-up](https://github.com/oscar-chw/qts-platform-showcase) (code private) · [runnable demo](https://github.com/oscar-chw/qts-platform-demo). Tick-level market data a student quant team can trust: raw → typed Parquet → cleaned layers, versioned query library and API, data-quality checks; the demo is an independent stand-in on synthetic data. **700B+ stored market-data rows; 23 of 23 concurrent commits preserved in a race test.**
-
-### 3. FatQat CUDA backend
+### 2. FatQat CUDA backend
 
 [fatqat-cuda](https://github.com/oscar-chw/fatqat-cuda): a fork of the open-source FatQat quantum simulator, kept in sync with upstream, adding a CUDA backend (all four simulation methods, several GPUs), an Apple-GPU runtime (bit-identical to the CPU engine, 1.18–1.52× faster at 24–26 qubits), automatic hardware selection, exact circuit simplification (on by default only where it changes nothing) and exact shot branching; inspired by the course CENG5280. **17–21× faster than the project's own optimised 32-thread CPU engine on 24–28-qubit observables with error-compensated GPU products, the default (23–26× in the opt-in fast mode; 35–42× with the r9 engines); shot branching 19–89× on noiseless circuits with mid-circuit measurements; within 2.9 machine epsilons of a 60-digit reference; 0 failures in 48,700 randomized checks.** Contributor to upstream FatQat: merged fix ([spaceqat/fatqat#52](https://github.com/spaceqat/fatqat/pull/52)).
+
+### 3. CUHK QTS research data platform
+
+[Write-up](https://github.com/oscar-chw/qts-platform-showcase) (code private) · [runnable demo](https://github.com/oscar-chw/qts-platform-demo). Tick-level market data a student quant team can trust: raw → typed Parquet → cleaned layers, versioned query library and API, data-quality checks; the demo is an independent stand-in on synthetic data. **700B+ stored market-data rows; 23 of 23 concurrent commits preserved in a race test.**
 
 ### 4. Competitions
 
