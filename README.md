@@ -43,7 +43,7 @@ One system: a vault of cited notes and results, a harness whose gates decide whe
 
 ### 3. FatQat CUDA backend
 
-[fatqat-cuda](https://github.com/oscar-chw/fatqat-cuda): a GPU (CUDA) backend for the open-source FatQat quantum simulator, CUHK CENG5280 coursework. **35–42× faster than a compiled CPU engine on a fixed 32-thread setting (not every core) for 24–28-qubit observables; every runtime within 3.1 machine epsilons of a 60-digit reference.**
+[fatqat-cuda](https://github.com/oscar-chw/fatqat-cuda): a fork of the open-source FatQat quantum simulator, kept in sync with upstream, adding a CUDA backend (all four simulation methods, several GPUs), exact circuit simplification (on by default only where it changes nothing) and exact shot branching; inspired by the course CENG5280. **35–42× faster than a fixed 32-thread CPU setting (not every core) at 24–28 qubits; shot branching 19–89× on noiseless measured circuits; within 2.9 machine epsilons of a 60-digit reference; 0 failures in 48,700 randomized checks.**
 
 ### 4. Competitions
 
