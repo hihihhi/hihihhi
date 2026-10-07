@@ -52,12 +52,12 @@ One system: a vault of cited notes and results, a harness whose gates decide whe
 |---|---|---|
 | [imc-prosperity-4-shdc](https://github.com/oscar-chw/imc-prosperity-4-shdc) | What we did in each round, what other teams did differently, and what I learned, against 9 public Prosperity 4 write-ups | Top 5% (904 / 18,803 teams) |
 | [ptcg-ai-battle](https://github.com/oscar-chw/ptcg-ai-battle) | A card game under imperfect information: imitation learning (set transformer), self-play PPO (not submitted), search baselines | 2,043 / 6,807 (team entry) |
+| [crypto-trading-pipeline](https://github.com/oscar-chw/crypto-trading-pipeline) | WQT 2025 hackathon bot, end to end: live market data, signals, risk limits, and real orders placed and tracked on the Roostoo exchange, with a backtester running the same decision code | 39 tests; live and backtest agree on all 130 bars checked |
 
 ### 5. Supporting work
 
 | Project | What it is | One number |
 |---|---|---|
-| [streaming-reconciliation](https://github.com/oscar-chw/streaming-reconciliation) | Counts each recorded trade close exactly once across JSONL/CSV copies and retries, streaming through sorted runs on disk (WQT 2025 hackathon; team strategy not included) | Peak memory −96% in 11.8% less time than an in-memory reader (100k synthetic closes) |
 | [dna-storage-simulation](https://github.com/Oscar-Codespace/dna-storage-simulation) | Individual course project: a seeded simulator for storing data in DNA, with insertion, deletion and substitution channels, Reed–Solomon and fountain-code recovery, and a simplified HEDGES-style beam-search decoder | No headline result: a teaching simulator on synthetic channels |
 | [alpha-gp-lab](https://github.com/oscar-chw/alpha-gp-lab) | Genetic programming over formulaic alpha expressions with pre-registered train/validation/test roles, delay-1 signals, costs and an equal-budget random search as a control | 34 coins, 6.7 years; test rank IC 0.08, matched by random search |
 
