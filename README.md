@@ -53,7 +53,7 @@ One system: a vault of cited notes and results, a harness whose gates decide whe
 |---|---|---|
 | [imc-prosperity-4-shdc](https://github.com/oscar-chw/imc-prosperity-4-shdc) | What we did in each round, what other teams did differently, and what I learned, against 9 public Prosperity 4 write-ups | Top 5% (904 / 18,803 teams) |
 | [ptcg-ai-battle](https://github.com/oscar-chw/ptcg-ai-battle) | A card game under imperfect information: imitation learning (set transformer), self-play PPO (not submitted), search baselines | 2,043 / 6,807 (team entry) |
-| [crypto-trading-pipeline](https://github.com/oscar-chw/crypto-trading-pipeline) | WQT 2025 hackathon bot, end to end: live market data, signals, risk limits, and real orders placed and tracked on the Roostoo exchange, with a backtester running the same decision code | 39 tests; live and backtest agree on all 130 bars checked |
+| [crypto-trading-pipeline](https://github.com/oscar-chw/crypto-trading-pipeline) | After the WQT 2025 hackathon, I rebuilt my competition bot into an exchange-agnostic pipeline on crypto-desk-blueprint: market data, signals, risk limits and confirmed-fill orders (paper trading by default, live via ccxt), with a backtester running the same decision code | 56 tests plus 58 blueprint conformance tests; live and backtest agree on all 130 bars checked |
 
 ### 5. Supporting work
 
